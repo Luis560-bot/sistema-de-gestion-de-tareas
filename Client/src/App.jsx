@@ -1,5 +1,7 @@
 import React from 'react'
 
+/* se importan los componentes necesarios para el enrutamiento, como BrowserRouter, Routes y Route desde react-router-dom. */
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Homepage from './assets/Pages/Homepage'
