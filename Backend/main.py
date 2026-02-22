@@ -1,10 +1,18 @@
+# para el entorno virtual se instala con: python -m venv env y seleccionamos el interprete de ese entorno virtual en nuestro editor (como vscode). 
+# "pip install fastapi uvicorn motor" es lo necesario para correr el backend, pero se pueden instalar otras dependencias como python-decouple para manejar variables de entorno.
+# sin depencias se instala con: pip install fastapi y eso seria todo lo necesario para correr el backend, pero se recomienda usar un entorno virtual para manejar las dependencias de manera aislada.
 # Ejecuta el servidor con: "uvicorn main:app --reload".
-# Importa FastAPI para crear la aplicacion web.
+
+# Importa el router de tareas desde el archivo Routes/task.py.
 from Routes.task import task
+
+# Importa FastAPI para crear la aplicación web.
+
 from fastapi import FastAPI
 
 
 # Importa CORSMiddleware para permitir solicitudes desde otros dominios.
+
 from fastapi.middleware.cors import CORSMiddleware
 
 # Importa config de decouple para manejar variables de entorno (como la URL del frontend).
@@ -15,6 +23,7 @@ from decouple import config
 
 
 # Instancia principal de la aplicacion.
+
 app = FastAPI()
 
 # Define los orígenes permitidos para CORS. En este caso, se obtiene la URL del frontend desde las variables de entorno.
